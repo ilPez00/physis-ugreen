@@ -56,8 +56,7 @@ only after explicit confirmation. Documents are untrusted evidence: embedded
 instructions are ignored. Passes the official static checker, zero
 diagnostics.
 
-## 8. What have you built so far? What is not built yet? What still needs
-testing on a NAS?
+## 8. What have you built so far? What is not built yet? What still needs testing on a NAS?
 
 Built: the complete Skill, three fixture cases with a manual oracle
 (complete evidence, a two-source conflict, a missing approval), an adversarial
