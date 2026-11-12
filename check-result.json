@@ -1,0 +1,30 @@
+{
+  "checkFormatVersion": "2.0.0",
+  "status": "static-pass",
+  "target": {
+    "skillName": "physis-casefiles"
+  },
+  "catalog": {
+    "checkedVersion": "2.2.0"
+  },
+  "files": [
+    {
+      "path": "references/evidence-rules.md",
+      "sha256": "3f3ff35a4d0038a7466e275bcf38a5490860bc14c29b70243af41cef1d4d0206"
+    },
+    {
+      "path": "references/report-format.md",
+      "sha256": "cf4f4cb6bf6b1ad84dfcbbf3466f5c6888f0031fe3756934f19e79f6035f2ecc"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "003412d22979337d258f9bc7279a41c7a0484a40a16ba194b239d9a3d46f13ae"
+    }
+  ],
+  "summary": {
+    "errors": 0,
+    "warnings": 0,
+    "info": 0
+  },
+  "diagnostics": []
+}
