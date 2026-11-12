@@ -48,6 +48,7 @@ scripts, no binaries, no Docker, no network calls.
   The exact ten application questions live on the Devpost submission form;
   these drafts cover the known themes and must be transcribed onto the real
   questions before any PDF is generated.
+- `example-casefile.md` — a hand-written illustration of the report format applied to fixture Case A. Labeled as manual: not a device run, not model output.
 - `check-result.json` — output of UGREEN's official static checker
   (`status: static-pass`, zero errors) for the current skill.
 
