@@ -1,80 +1,86 @@
 # PHYSIS CASEFILES: From file investigator to an emerging cognitive system
 
-Draft answers for the Round 1 proposal PDF (≤ 500 substantive words).
-**The exact ten questions live on the Devpost submission form, which requires
-registration; these drafts cover the known themes and must be transcribed
-onto the real questions before any PDF is generated.** Nothing here has been
-submitted or registered.
+Round 1 proposal answers, mapped to the ten official Devpost questions.
 
-## 1. Project name
+## 1. What does your Skill do? (one sentence)
 
-PHYSIS CASEFILES.
+PHYSIS Casefiles investigates one question across a folder you select and
+returns a source-cited casefile: dated chronology, supported findings,
+conflicts quoted both sides, unresolved questions, source list.
 
-## 2. Inspiration
+## 2. Who is your target user, and what is their problem?
 
-When a renovation goes wrong, the truth is already in the folder: the
-estimate, the change order, the invoice that quietly grew. Nobody assembles
-it, and reading forty documents carefully is what people avoid, so disputes
-are settled by whoever remembers loudest. A NAS is where a household's
-documents accumulate; it should reconstruct what happened from them.
+Homeowners and small offices whose NAS holds contracts, estimates, change
+orders and invoices. When a project goes wrong the truth is in the folder,
+but nobody re-reads forty documents, so disputes are settled by the loudest
+memory.
 
-## 3. What it does
+## 3. What is your solution?
 
-PHYSIS Casefiles investigates one question across one folder the user
-explicitly selects. It discovers contracts, estimates, invoices, change
-orders, notes, and — on request — recordings and photographed documents. It
-returns a casefile: a dated chronology, supported findings, conflicts quoted
-from both sides, unresolved questions, and a source list where every claim
-cites its file and locator. It distinguishes what a document says from what
-happened in the world, and treats an empty search as a finding, not a failure.
+A Uliya Skill that reconstructs what happened from the folder's own
+documents. Every finding carries one of three states — supported, conflicting,
+not established — cited to the named file. Gaps are reported as missing
+evidence, never filled with a story.
 
-## 4. How we built it
+## 4. What is the main user flow?
 
-A Uliya Skill delegating only to UGOS's registered experts: file-agent for
-discovery, document-agent for extraction and native reconciliation, photo-agent
-for OCR of photographed records, knowledge-agent for transcription and saving.
-No custom binaries, no Docker, no scripts — Markdown and the platform's own
-capabilities. It passes UGREEN's official static checker.
+You name the folder and ask one question. The skill discovers documents,
+extracts dates, amounts, parties and commitments, reconciles agreements
+against invoices, optionally transcribes recordings or reads photographed
+documents, and returns the casefile in conversation. Saving happens only on
+your request and confirmed destination.
 
-## 5. Challenges
+## 5. How is your idea different from existing tools or common AI solutions?
 
-The hardest problem was honesty under completion pressure: a language model
-wants to finish the story. We built abstention into every stage — three
-evidence states only (supported, conflicting, not established), no arithmetic
-unless currency and tax treatment are clear, no inference of fraud, payment
-or causation, copies never counted as corroboration.
+Search finds documents; chat assistants complete the story confidently.
+Casefiles refuses: no arithmetic unless currency and tax treatment match, no
+inference of fraud, payment or causation, copies never counted as
+corroboration, an empty search reported as a finding. Absence, correctly
+reported, is the product.
 
-## 6. Accomplishments
+## 6. Which UGREEN AI NAS features does your Skill use, and at which step?
 
-Three synthetic fixture cases with a manually written oracle — complete
-evidence, a two-source conflict, and a missing approval that must stay
-unresolved — plus an adversarial document with an embedded prompt injection
-the skill must ignore. Every honesty rule is exercised.
+Discovery: `ug-filesystem find`/`ls` via file-agent. Extraction and
+comparison: `ug-document extract`, `metadata`, native `reconcile` via
+document-agent. Optional enrichment: `ug-knowledge audio-transcription`
+(approval), `ug-photo vision-ocr`/`search-picture` via photo-agent. Saving:
+`ug-knowledge save-text` (approval). All through UGOS's registered agents.
 
-## 7. What we learned
+## 7. What is your technical approach?
 
-Evidence discipline is a product feature. Users do not want a confident
-story; they want to know which file says what, and to be told plainly what is
-missing. Absence, correctly reported, builds more trust than a
-complete-looking answer.
+A Markdown-only Skill: no scripts, binaries or network calls. Each stage
+delegates to one registered expert with an instruction built from the user's
+actual inputs and real upstream results; nothing is invented between stages.
+Mappings follow UGREEN's catalog v2.2.0. Approval-classified operations run
+only after explicit confirmation. Documents are untrusted evidence: embedded
+instructions are ignored. Passes the official static checker, zero
+diagnostics.
 
-## 8. What's next
+## 8. What have you built so far? What is not built yet? What still needs
+testing on a NAS?
 
-Round 2: run the fixtures on a real UGOS device, compare outputs against the
-oracle, and record what passed and what did not. Beyond the hackathon: the
-casefile method — observe, cite, abstain — is the seed of a household
-cognitive system that remembers what its documents say, notices when records
-contradict, and never fills a gap with imagination. The file investigator is
-the first verifiable step toward that system.
+Built: the complete Skill, three fixture cases with a manual oracle
+(complete evidence, a two-source conflict, a missing approval), an adversarial
+prompt-injection document, a worked example report, a clean static check.
+Not built: nothing runs on a device yet — a static pass does not establish
+agent reasoning, approvals or returned locators. All of that needs testing
+on a NAS.
 
-## 9. A note on the system behind the skill
+## 9. How will you test your Skill if you become a Finalist?
 
-The skill's evidence method mirrors an open-source evidence engine the entrant
-builds: append-only observations, claims checked against evidence, uncertainty
-as first-class output. None of it ships in the skill; the skill stands on
-UGOS's own registered experts.
+Core 1 (complete evidence): estimate EUR 18,000 plus a signed EUR 2,700
+change order must reconcile to the EUR 20,700 invoice, every step cited.
+Core 2 (conflict): a EUR 2,700 approval against a EUR 4,100 invoice must be
+reported as a EUR 1,400 discrepancy, both sources cited, never as fraud.
+Edge: a missing approval plus a document with an embedded prompt-injection
+instruction — the Skill must report "not established", refuse the injection,
+not invent knowledge of the inaccessible file.
 
-## 10. Built with
+## 10. What are the known limits, risks, or outside dependencies?
 
-UGOS Skill Creation Tool, UGREEN capability catalog v2.2.0, and AI assistance
-(drafting, catalog review, static checks), disclosed per rules.
+Static checks only so far. OCR and transcription quality on scanned or
+noisy files is unverified on device; illegible scans must be reported
+unreadable, not guessed. Depends on UGREEN's registered experts, their
+approval flow, and actual device behavior — catalog examples are placeholders,
+device responses authoritative. No privacy or deployment claims without
+verification. AI assistance disclosed per rules.
