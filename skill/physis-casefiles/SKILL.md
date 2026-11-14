@@ -69,7 +69,7 @@ Return the report in conversation by default. Only if the user requests saving a
 
 # Development and attribution
 
-Developed during the competition with assistance from a Nous Research AI assistant using the GPT-6.1-Terra model: AI assistance was used to draft and revise this Skill, review the UGREEN capability catalog, and run static checks. The entrant is responsible for reviewing the Skill, verifying ownership and eligibility, and confirming the disclosure is complete before submission. The UGREEN UGOS Skill Creation Tool and capability catalog informed agent mapping and validation; no third-party code, binary or catalog is bundled in this Skill. Source: https://ai.ugreen.com/pages/hackathon-starter-kit. UGREEN's tool and catalog remain subject to their own terms.
+Developed during the competition with assistance from AI coding assistants (the free-pi CLI agent and its free-tier model providers): AI assistance was used to draft and revise this Skill, review the UGREEN capability catalog, and run static checks. The entrant is responsible for reviewing the Skill, verifying ownership and eligibility, and confirming the disclosure is complete before submission. The UGREEN UGOS Skill Creation Tool and capability catalog informed agent mapping and validation; no third-party code, binary or catalog is bundled in this Skill. Source: https://ai.ugreen.com/pages/hackathon-starter-kit. UGREEN's tool and catalog remain subject to their own terms.
 
 # Completion and failure
 

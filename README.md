@@ -38,29 +38,34 @@ scripts, no binaries, no Docker, no network calls.
 
 ## Repository contents
 
-- `skill/physis-casefiles/` — the skill package (`SKILL.md` + references),
-  also shipped as the Round 1 ZIP.
+- `skill/physis-casefiles/` — the skill package (`SKILL.md` + references).
+- `physis-casefiles-round1.zip` — the Round 1 Pre-test Skill Package. It
+  extracts to `physis-casefiles/`; the directory name matches the frontmatter
+  `name`, which the official checker requires (`SKILL_NAME_MISMATCH` otherwise).
+  5.9 KB zipped, 12.7 KB uncompressed, 3 files, each under 1 MB.
+- `physis-casefiles-proposal.pdf` — Round 1 project proposal (A4, 3 pages,
+  48 KB; the ten answers total 484 substantive words, limit 500).
 - `fixtures.md` — three synthetic evaluation cases with a manually written
   oracle (complete evidence / genuine conflict / missing approval), plus an
   adversarial document with an embedded prompt injection the skill must
   ignore. Fixtures establish expected outcomes, not execution results.
-- `proposal.md` — draft Round 1 proposal answers (≤ 500 substantive words).
-  The exact ten application questions live on the Devpost submission form;
-  these drafts cover the known themes and must be transcribed onto the real
-  questions before any PDF is generated.
+- `proposal.md` — the ten answers as Markdown, mapped to the ten official
+  Devpost questions (484 substantive words).
 - `example-casefile.md` — a hand-written illustration of the report format applied to fixture Case A. Labeled as manual: not a device run, not model output.
 - `check-result.json` — output of UGREEN's official static checker
   (`status: static-pass`, zero errors) for the current skill.
 
 ## Status and honesty
 
-- Nothing has been registered or submitted yet.
+- Nothing has been registered or submitted yet. Round 1 closes 2026-11-16
+  08:45 CET (Nov 15, 11:45 pm PT).
 - The skill has passed **static checks only**. It has not executed on a UGREEN
   device; agent reasoning, gateway approvals and output locators on the real
   platform are not established by a static pass.
-- Developed during the competition with AI assistance (drafting, catalog
-  review, static checks), disclosed per contest rules. No UGREEN kit files,
-  catalogs or third-party code are bundled in this repository.
+- AI assistance disclosed per contest rules: the free-pi CLI agent (free-tier
+  model providers) was used to draft and revise the Skill, review the UGREEN
+  capability catalog, and run static checks. No UGREEN kit files, catalogs or
+  third-party code are bundled in this repository.
 - The entrant is responsible for verifying eligibility, originality and
   disclosure completeness before submission.
 
