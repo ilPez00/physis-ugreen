@@ -40,3 +40,11 @@ and uncompressed, ≤ 1 MB per file, ≤ 100 files).
   the ZIP.
 - The proposal does not claim NAS execution: Round 1 does not require it, and
   the current text says so explicitly.
+
+## Submission status
+
+2026-11-18: operator confirms Round 1 WAS submitted manually before the
+2026-11-16 08:45 CET deadline (no portal receipt saved in this repo).
+Round 2 is finalists-only (up to 30 selected); watch the Devpost page and
+email for the finalist announcement. If selected: final Skill + short demo
+video.
