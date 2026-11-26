@@ -1,6 +1,7 @@
 # Round 1 submission checklist
 
-Round 1 closes **2026-11-16 08:45 CET** (Nov 15, 11:45 pm PT).
+Round 1 closed **2026-11-16 08:45 CET** (Nov 15, 11:45 pm PT). Status: submitted
+(see the final section).
 Deliverables: a proposal PDF (≤ 1 MB) and a Pre-test Skill ZIP (≤ 10 MB zipped
 and uncompressed, ≤ 1 MB per file, ≤ 100 files).
 

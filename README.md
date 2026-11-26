@@ -57,8 +57,9 @@ scripts, no binaries, no Docker, no network calls.
 
 ## Status and honesty
 
-- Nothing has been registered or submitted yet. Round 1 closes 2026-11-16
-  08:45 CET (Nov 15, 11:45 pm PT).
+- **Submitted.** The operator confirms Round 1 was submitted manually before the
+  2026-11-16 08:45 CET deadline (no portal receipt is saved in this repo).
+  Finalists are announced 2026-11-27; Round 2 is finalists-only (up to 30).
 - The skill has passed **static checks only**. It has not executed on a UGREEN
   device; agent reasoning, gateway approvals and output locators on the real
   platform are not established by a static pass.
